@@ -1,7 +1,6 @@
 package com.krawik01.BankApi.service;
 
 import com.krawik01.BankApi.model.Account;
-import com.krawik01.BankApi.model.Customer;
 import com.krawik01.BankApi.model.DTO.AccountDTO;
 
 import java.util.List;
@@ -12,5 +11,7 @@ public interface AccountService {
     AccountDTO createAccount(Account account);
 
     List<Account> findAll();
+
+    void deleteAccountByAccountId(Long id);
 
 }

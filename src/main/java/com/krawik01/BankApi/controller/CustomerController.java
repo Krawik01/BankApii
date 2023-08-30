@@ -24,8 +24,8 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
     @GetMapping("{id}/balance")
-    public ResponseEntity<Map<Long, Long>> showBalance(@PathVariable Long id){
-        Map<Long, Long> balances = customerService.showBalanceForAllAccounts(id);
+    public ResponseEntity<Map<String, Long>> showBalance(@PathVariable Long id){
+        Map<String, Long> balances = customerService.showBalanceForAllAccounts(id);
         return ResponseEntity.ok(balances);
     }
 

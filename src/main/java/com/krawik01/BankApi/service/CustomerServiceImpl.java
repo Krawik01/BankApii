@@ -37,14 +37,14 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public Map<Long, Long> showBalanceForAllAccounts(Long id) {
+    public Map<String, Long> showBalanceForAllAccounts(Long id) {
         List<Account> allAccounts = customerRepository.findById(id)
                 .orElseThrow(() -> new CustomerNotFoundException("Customer not found"))
                 .getAccounts();
 
         return allAccounts.stream()
                 .collect(Collectors.toMap(
-                        Account::getAccountId,
+                        Account::getAccountNumber,
                         Account::getBalance
                 ));
     }

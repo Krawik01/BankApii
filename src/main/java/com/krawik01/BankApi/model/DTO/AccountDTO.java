@@ -1,10 +1,8 @@
 package com.krawik01.BankApi.model.DTO;
 
-import com.krawik01.BankApi.model.*;
 import lombok.*;
 
 import java.util.List;
-import java.util.Set;
 
 @AllArgsConstructor
 @Getter
@@ -17,8 +15,8 @@ public class AccountDTO {
     private CustomerDTO customer;
     private Long balance;
     private String accountType;
-    private List<TransactionDTO> outgoingTransactions;
-    private List<TransactionDTO> incomingTransactions;
+    private List<TransferDTO> outgoingTransactions;
+    private List<TransferDTO> incomingTransactions;
 }
 
 

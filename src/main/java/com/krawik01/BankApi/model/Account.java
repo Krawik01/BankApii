@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import com.krawik01.BankApi.model.*;
 
-import java.math.BigDecimal;
 import java.util.List;
 @Entity
 @Table(name = "Accounts")
@@ -28,17 +26,10 @@ public class Account {
     @Column(name = "account_type")
     private String accountType;
     @JsonIgnore
-    @OneToMany(mappedBy = "fromAccount",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "fromAccount",cascade = CascadeType.MERGE)
     private List<Transfer> outgoingTransactions;
     @JsonIgnore
-    @OneToMany(mappedBy = "toAccount", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "toAccount", cascade = CascadeType.MERGE)
     private List<Transfer> incomingTransactions;
 
-    public void updateBalanceForTransaction(Long amount) {
-        if (balance >= amount) {
-            balance -= amount;
-        } else {
-            throw new RuntimeException("Insufficient balance");
-        }
-    }
 }

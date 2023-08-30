@@ -19,12 +19,12 @@ public class Transfer {
     private Long transactionId;
 
     @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "from_account_id")
     private Account fromAccount;
 
     @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "to_account_id")
     private Account toAccount;
 

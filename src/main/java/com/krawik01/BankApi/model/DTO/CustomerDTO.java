@@ -8,6 +8,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
+@Data
 @NoArgsConstructor
 public class CustomerDTO {
 

@@ -1,0 +1,29 @@
+[
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "phoneNumber": "+1234567890"
+}
+,
+{
+  "accountNumber":491020289222763005000002,
+  "customer": {
+    "customerId": 1
+  },
+  "balance": 1000,
+  "accountType": "savings",
+  "outgoingTransactions": [],
+  "incomingTransactions": []
+},
+  {
+    "fromAccount": {
+      "accountNumber": 491020289222763005000002
+    },
+    "toAccount" : {
+      "accountNumber" : 491020289222763005000001
+    },
+    "amount" : 100
+
+  }
+]

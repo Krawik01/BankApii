@@ -1,19 +1,17 @@
 package com.krawik01.BankApi.model.DTO;
 
-import com.krawik01.BankApi.model.Account;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
-public class TransactionDTO {
+public class TransferDTO {
 
     private Long transactionId;
     private AccountDTO fromAccount;

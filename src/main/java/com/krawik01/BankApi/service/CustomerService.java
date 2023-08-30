@@ -13,7 +13,7 @@ public interface CustomerService {
 
     Optional<Customer> findById(Long id);
 
-    Map<Long, Long> showBalanceForAllAccounts(Long id);
+    Map<String, Long> showBalanceForAllAccounts(Long id);
 
     List<Customer> findAll();
 
